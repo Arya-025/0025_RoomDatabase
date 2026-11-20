@@ -35,7 +35,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.prak9.R
 import com.example.prak9.room.Siswa
 import com.example.prak9.uicontroller.DestinasiHome
-import com.example.prak9.uicontroller.DestinasiNavigasi
 import com.example.prak9.uicontroller.SiswaTopAppBar
 import com.example.prak9.viewmodel.HomeViewModel
 import com.example.prak9.viewmodel.PenyediaViewModel
@@ -45,7 +44,8 @@ import com.example.prak9.viewmodel.PenyediaViewModel
 fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory),
+    navigateToItemUpdate: () -> Unit
 ){
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
 
